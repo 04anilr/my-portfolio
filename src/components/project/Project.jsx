@@ -7,7 +7,7 @@ export const Project = () => {
     <h2 class="section-title">Projects</h2>
     <article class="project">
       <div class="project__img-container">
-        <img class="project__img" src='https://images.unsplash.com/photo-1544474560-5b2a788d024a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODI3NjU2OTU&ixlib=rb-4.0.3&q=80&w=800' alt=''>
+        <img class="project__img" src='https://images.unsplash.com/photo-1544474560-5b2a788d024a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODI3NjU2OTU&ixlib=rb-4.0.3&q=80&w=800' alt=''/>
       </div>
       <div class="project__content grid-flow">
         <h3 class="project__title">E Commerce Website</h3>
@@ -21,7 +21,7 @@ export const Project = () => {
     </article>
     <article class="project">
       <div class="project__img-container">
-        <img class="project__img" src='https://images.unsplash.com/photo-1620287920810-3f5b9746380c?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODI3Njc2NTY&ixlib=rb-4.0.3&q=85&w=800' alt=''>
+        <img class="project__img" src='https://images.unsplash.com/photo-1620287920810-3f5b9746380c?crop=entropy&cs=srgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODI3Njc2NTY&ixlib=rb-4.0.3&q=85&w=800' alt=''/>
       </div>
       <div class="project__content grid-flow">
         <h3 class="project__title">Todo App</h3>
@@ -36,7 +36,7 @@ export const Project = () => {
     </article>
     <article class="project">
       <div class="project__img-container">
-        <img class="project__img" src='https://images.unsplash.com/photo-1600783245998-945baf9626bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODI3NjcyNDY&ixlib=rb-4.0.3&q=80&w=800' alt=''>
+        <img class="project__img" src='https://images.unsplash.com/photo-1600783245998-945baf9626bc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODI3NjcyNDY&ixlib=rb-4.0.3&q=80&w=800' alt=''/>
       </div>
       <div class="project__content grid-flow">
         <h3 class="project__title">Twitter UI Clone</h3>
@@ -51,7 +51,7 @@ export const Project = () => {
     </article>
     <article class="project">
       <div class="project__img-container">
-        <img class="project__img" src='https://images.unsplash.com/photo-1650182040372-66cd50e43887?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODI3NjgwOTQ&ixlib=rb-4.0.3&q=80&w=800' alt=''>
+        <img class="project__img" src='https://images.unsplash.com/photo-1650182040372-66cd50e43887?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2ODI3NjgwOTQ&ixlib=rb-4.0.3&q=80&w=800' alt=''/>
       </div>
       <div class="project__content grid-flow">
         <h3 class="project__title">Product Landing Page Website</h3>
