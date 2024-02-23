@@ -1,9 +1,9 @@
 import Work1 from "../../assets/localhost_5174_(Nest Hub).png";
-import Work2 from "../../assets/google-clone-puce-theta.vercel.app_.png";
+import Work2 from "../../assets/google-clone-puce-theta.vercel.app_(Nest Hub).pngq";
 import Work3 from "../../assets/weather-appp-rosy.vercel.app_ (1).png";
 import Work4 from "../../assets/04anilr.netlify.app_blogs_flashcard_.png";
 import Work5 from "../../assets/insta-clone-5cuirgfg3-anil-rajputs-projects.vercel.app_.png";
-import Work6 from "../../assets/work5.jpg";
+
 // import Work6 from "../../assets/work6.png";
 // import Work7 from "../../assets/google-clone-puce-theta.vercel.app_.png"
 
