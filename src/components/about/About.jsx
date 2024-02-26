@@ -4,7 +4,7 @@ import AboutImg from "../../assets/profile-pic (4).png";
 import { Info } from './Info';
 
 export const About = () => {
-  const CV = "www.google.com"
+  const CV = "https://drive.google.com/file/d/1IVbTlBp9HdZNKBCoteGHOWGRGFipZ8_u/view";
     return (
         <section className="about section" id="about">
             <h2 className="section_title">About Me</h2>
