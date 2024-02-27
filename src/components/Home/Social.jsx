@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { SiMusicbrainz } from "react-icons/si";
 
 export const Social = () => {
   return (
@@ -12,8 +13,8 @@ export const Social = () => {
             <i class='uil uil-instagram'></i>
 
         </a>
-        <a href="" className='home_social-icon' target='_blank'>
-        <i class='uil uil-dribbble'></i>
+        <a href="https://www.codingninjas.com/studio/profile/04anilr" className='home_social-icon' target='_blank'>
+        <i class='uil'><SiMusicbrainz /></i>
 
         </a>
         <a href="https://github.com/04anilr" className='home_social-icon' target='_blank'>
