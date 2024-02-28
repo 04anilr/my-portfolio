@@ -3,9 +3,9 @@ import Work2 from "../../assets/GoogleClone.png";
 import Work3 from "../../assets/weather-appp-rosy.vercel.app_ (1).png";
 import Work4 from "../../assets/04anilr.netlify.app_blogs_flashcard_.png";
 import Work5 from "../../assets/insta-clone-5cuirgfg3-anil-rajputs-projects.vercel.app_.png";
-
-// import Work6 from "../../assets/work6.png";
-// import Work7 from "../../assets/google-clone-puce-theta.vercel.app_.png"
+import Work6 from "../../assets/todolist.png";
+import Work7 from "../../assets/number-counter.png";
+import Work8 from "../../assets/calculator.png";
 
 
 export const projectsData = [
@@ -47,24 +47,27 @@ export const projectsData = [
     category: 'web',   
     demoLink: 'https://insta-clone-5cuirgfg3-anil-rajputs-projects.vercel.app/',
 },
-// {
-//     id: 5,
-//     image: Work5,
-//     title: 'Web design',
-//     category: 'web',   
-// },
-// {
-//     id: 6,
-//     image: Work6,
-//     title: 'web design',
-//     category: 'web',
-// },
-// {
-//     id: 7,
-//     image: Work7,
-//     title: 'web design',
-//     category: 'web',
-// },
+{
+    id: 6,
+    image: Work6,
+    title: 'To-do-list',
+    category: 'app', 
+    demoLink: 'https://todolist0402.netlify.app/',  
+},
+{
+    id: 7,
+    image: Work7,
+    title: 'Number-counter',
+    category: 'app',
+    demoLink: 'https://number-counter12.netlify.app/',  
+},
+{
+    id: 8,
+    image: Work8,
+    title: 'Calculator',
+    category: 'app',
+    demoLink: 'https://calculator0402.netlify.app/',
+},
  
 ];
 
