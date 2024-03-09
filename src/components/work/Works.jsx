@@ -44,6 +44,6 @@ export const Works = () => {
         return <WorkItems item={item} key={item.id}/>;
       })}
     </div>
-   </div>
+    </div>
   );
 };
