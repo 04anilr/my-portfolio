@@ -52,6 +52,9 @@
     left: 0;
     top: 1rem;
 }
+.send-icon {
+    margin-left: 5px;
+}
 
 .home_img {
     background: url(../../assets//profile-pic\ \(4\).png);
@@ -85,7 +88,10 @@
 
 .wheel {
     animation: scroll 2s ease infinite;
+
+   
 }
+
 
 @keyframes scroll {
     0% {
@@ -98,15 +104,17 @@
 }
 
 .home_scroll-name {
-    color: rgb(19, 19, 19);
+    color: var(--title-color-dark);
     font-weight: var(--font-medium);
     margin-left: 2px;
 }
 .home_scroll-arrow {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     color: var(--title-color);
-    color: rgb(19, 19, 19);
+    color: var(--title-color-dark);
+   
 }
+
 
 @media screen and (max-width: 992px) {
    .home_content {

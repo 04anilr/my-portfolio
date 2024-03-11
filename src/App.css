@@ -9,11 +9,12 @@
 /* color mode HSL(hue, saturation, lightness) */
 --hue: 0;
 --sat: 0%;
+--border-color: rgb(189, 189, 189);
 --title-color: hsl(var(--hue), var(--set), 20%);
 --title-color-dark: #000000;
 --text-color: 	#3b3939;
 --body-color: #F5F5F5;
---container-color: hsl(0, 0%, 100%);
+--container-color: white;
 
 
 /* =========== font and typography =============== */
@@ -53,6 +54,15 @@
 --z-fixed: 100;
 --z-modal: 1000;
 }
+.dark-theme {
+ --title-color: hsl(var(--hue), var(--set), 20%);
+--title-color-dark: #fcfbfb;
+--text-color: 	#dad5d5;
+--body-color: #030303;
+--container-color: hsl(0, 1%, 23%);
+}
+
+
 
 /* Responsive typography */
 @media screen and (max-width: 992px) {
@@ -152,14 +162,15 @@ img {
 /* =========== BUTTONS =============== */
 .button {
   display: inline-block;
-  background-color: rgb(31, 30, 30);
-  color: var(--container-color);
+  background-color: var(--body-color);
+  color: var(--title-color-dark);
   padding: 1rem 1.25rem;
+  border: 2px solid var(--text-color);
   border-radius: 1rem;
   font-weight: var(--font-medium);
 }
 .button:hover {
-  background-color: rgb(57, 56, 56);
+  background-color: var(--container-color);
 }
 
 .button_icon {

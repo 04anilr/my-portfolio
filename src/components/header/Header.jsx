@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import "./header.css"; 
+import { MdDarkMode } from "react-icons/md";
+import { MdLightMode } from "react-icons/md";
 
-const Header = () => {
+const Header = ({theme, toggleTheme}) => {
 /* ================  change background Header  =================== */
 window.addEventListener("scroll", function () {
     const header = document.querySelector(".header");
@@ -54,6 +56,21 @@ window.addEventListener("scroll", function () {
         </div>
         <div className='nav_toggle' onClick={() => setToggle(!toggle)}>
             <i className='uil uil-apps'></i>
+        </div>
+{/*=================== light mode function ============================== */}
+        <div className='light_mode'>
+            <span onClick = {toggleTheme}>
+                {theme === "light-theme" ? (
+                    <span>
+                        <MdDarkMode />
+                    </span>
+                ) : (
+                    <span>
+                       <MdLightMode />
+                    </span>
+                )}
+            </span>
+
         </div>
     </nav>
 </header>
