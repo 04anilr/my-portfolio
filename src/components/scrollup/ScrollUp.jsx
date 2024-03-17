@@ -10,8 +10,8 @@ export const ScrollUp = () => {
     })
 
   return (
-   <button className="scrollup">
+   <a herf="" className="scrollup">
     <i className="uil uil-arrow-up scrollup_icon"></i>
-   </button>
+   </a>
   )
 }
