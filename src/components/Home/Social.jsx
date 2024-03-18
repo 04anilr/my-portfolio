@@ -10,7 +10,7 @@ export const Social = () => {
 
         </a>
 
-        <a href="https://www.instagram.com/?next=%2F" className='home_social-icon' target='_blank'>
+        <a href="https://dev.to/04anilr" className='home_social-icon' target='_blank'>
             <i class='uil'><FaDev /></i>
 
         </a>
