@@ -1,5 +1,6 @@
 import React from 'react';
 import "./footer.css";
+import { FaDev } from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -33,6 +34,10 @@ export const Footer = () => {
         </a>
         <a href="https://github.com/04anilr" className='footer_social-link' target='_blank'>
         <i class='uil uil-github-alt'></i>
+
+        </a>
+               <a href="https://dev.to/04anilr" className='footer_social-link' target='_blank'>
+        <i class='uil'>< FaDev /></i>
 
         </a>
             </div>
