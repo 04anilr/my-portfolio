@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./header.css"; 
 import { MdDarkMode } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
+import { PiArticleMediumBold } from "react-icons/pi";
 
 const Header = ({theme, toggleTheme}) => {
 /* ================  change background Header  =================== */
@@ -36,6 +37,12 @@ window.addEventListener("scroll", function () {
                     <a href="#skills" onClick={() => setActiveNav("#skills")} className={activeNav === "#skills" ?'nav_link active_link' : "nav_link"}>
                         <i className="uil uil-file-alt nav_icon"></i>
                         Skills
+                    </a>
+                </li>
+                <li className='nav_item'>
+                    <a href="#blog" onClick={() => setActiveNav("#blog")} className={activeNav === "#blog" ?'nav_link active_link' : "nav_link"}>
+                        <i className="uil nav_icon"><PiArticleMediumBold/></i>
+                        Blogs
                     </a>
                 </li>
                 <li className='nav_item'>

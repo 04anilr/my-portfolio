@@ -1,5 +1,6 @@
 import React from 'react';
 import "./footer.css";
+import { FaDev } from "react-icons/fa";
 
 export const Footer = () => {
   return (
@@ -23,8 +24,8 @@ export const Footer = () => {
 
             <div className="footer_social">
 
-            <a href="https://www.instagram.com/?next=%2F" className='footer_social-link' target='_blank'>
-            <i class='uil uil-instagram'></i>
+            <a href="https://dev.to/04anilr" className='footer_social-link' target='_blank'>
+            <i class='uil'><FaDev /></i>
 
         </a>
         <a href="https://www.linkedin.com/in/anil-rajput-6411a4233/" className='footer_social-link' target='_blank'>

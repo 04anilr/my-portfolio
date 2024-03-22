@@ -1,5 +1,6 @@
 import React from 'react';
 import { SiMusicbrainz } from "react-icons/si";
+import { FaDev } from "react-icons/fa";
 
 export const Social = () => {
   return (
@@ -9,8 +10,8 @@ export const Social = () => {
 
         </a>
 
-        <a href="https://www.instagram.com/?next=%2F" className='home_social-icon' target='_blank'>
-            <i class='uil uil-instagram'></i>
+        <a href="https://dev.to/04anilr" className='home_social-icon' target='_blank'>
+            <i class='uil'><FaDev /></i>
 
         </a>
         <a href="https://www.codingninjas.com/studio/profile/04anilr" className='home_social-icon' target='_blank'>

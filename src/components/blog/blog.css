@@ -1,0 +1,85 @@
+/* blog.css */
+
+.articles-container {
+    max-width: 775px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .articles {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .article {
+    display: flex;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .articles-img {
+    flex: 0 0 30%; /* 30% width for the image */
+  }
+  
+  .articles-img img {
+    width: 294px;
+    height: 207px;
+    border-radius: 5px 0 0 5px;
+}
+  
+  .article div { /* Remaining width for text content */
+    padding: 11px;
+  }
+  
+  h2 {
+    font-size: 1rem;
+    margin-top: 0;
+  }
+  
+  p {
+    margin-bottom: 10px;
+  }
+  
+  .buttons {
+    display: block;
+    padding: 5px 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    background-color: var(--container-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+  }
+  
+  .buttons:hover {
+    background-color: var(--body-color);
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .article {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+  
+    .articles-img img {
+      width: 100%; /* Full width for the image on smaller screens */
+    }
+  
+    .article div {
+      /* Full width for text content on smaller screens */
+      padding: 15px;
+    }
+  }
+  
