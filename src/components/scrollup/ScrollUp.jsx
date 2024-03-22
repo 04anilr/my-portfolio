@@ -8,12 +8,6 @@ export const ScrollUp = () => {
         if (this.scrollY >= 560) scrollUp.classList.add("show-scroll");
         else scrollUp.classList.remove("show-scroll");
     })
-    function ScrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    }
 
   return (
    <button className="scrollup" onClick={ScrollToTop}>

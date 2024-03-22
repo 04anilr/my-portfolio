@@ -36,6 +36,10 @@ export const Footer = () => {
         <i class='uil uil-github-alt'></i>
 
         </a>
+               <a href="https://dev.to/04anilr" className='footer_social-link' target='_blank'>
+        <i class='uil'>< FaDev /></i>
+
+        </a>
             </div>
             <span className="footer_copy">
                 &#169; 2024. All rights reserved

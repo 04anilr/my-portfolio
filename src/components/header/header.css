@@ -92,7 +92,8 @@
     transition: .3s;
   }
   .dark-theme .nav_menu {
-    background-color: var(--title-color-dark);
+    background-color: var(--body-color);
+      color: var(--title-color);
   }
 /* show menu */
 .show-menu {
