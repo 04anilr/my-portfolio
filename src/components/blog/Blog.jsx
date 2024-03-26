@@ -3,7 +3,7 @@ import './blog.css';
 
 export const Blog = () => {
     const [articles, setArticles] = useState([]);
-    const maxArticlesToShow = 6;
+    const maxArticlesToShow = 4;
     useEffect(() => {
       const fetchArticles = async () => {
         try {
@@ -12,7 +12,7 @@ export const Blog = () => {
             throw new Error('Network response was not ok');
           }
           const data = await response.json();
-          setArticles(data.slice(2, maxArticlesToShow));
+          setArticles(data.slice(0, maxArticlesToShow));
         } catch (error) {
           console.error('Error fetching articles:', error);
         }
