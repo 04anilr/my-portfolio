@@ -33,7 +33,8 @@
   .articles-img img {
     width: 294px;
     height: 207px;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px;
+    border: 2px solid var(--text-color);
 }
   
   .article div { /* Remaining width for text content */
