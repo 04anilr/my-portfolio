@@ -9,8 +9,8 @@ const Backend = () => {
             <div className="skills_data">
                 <i class="bx bx-badge-check"></i>
             <div>
-                <h3 className="skills_name">Next.js</h3>
-                <span className="skills_level">Basic</span>
+                <h3 className="skills_name">Frappe/ERPNext</h3>
+                <span className="skills_level">Intermediat</span>
             </div>
             </div>
             <div className="skills_data">
