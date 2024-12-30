@@ -16,9 +16,10 @@ export const About = () => {
                 <div className="about_data">
                     <Info />
                     <p className="about_description">
-                        Hello! I'm a <span className='about_title'>Frontend developer, </span> 
-                        I create web page with <span className='about_title'>React</span> user interface,
-                        I have fresher experience but many clients are happy with the project carried out. 
+         Hello! I'm a <span className='about_title'>Software Developer,</span> 
+I create web pages with <span className='about_title'>React</span> and <span className='about_title'>Next.js</span> for the frontend, and I use <span className='about_title'>Frappe</span> and <span className='about_title'>ERPNext</span> for backend development. 
+I have one year of experience, and many clients are happy with the projects I've carried out.
+
                         </p>
                         <a download="" href={CV} className="button button--flex">
                             Download CV <FaArrowCircleDown className='cv-icon' />
