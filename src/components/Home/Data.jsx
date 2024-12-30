@@ -55,9 +55,9 @@ export const Data = () => {
                   ></path>
                 </svg>
         </h1>
-        <h3 className="home_subtitle">Frontend Developer</h3>
+        <h3 className="home_subtitle">Software Developer @Hybrowlabs Technology</h3>
         <p className="home_description">
-            I'm creative web developer, and I'm very passionate and dedicated to my work. 
+            I'm very passionate and dedicated to my work. 
         </p>
         <a href="#contact" className="button button--flex">
             Say Hello<LuSend className='send-icon'/>
