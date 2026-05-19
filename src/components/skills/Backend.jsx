@@ -7,31 +7,31 @@ const Backend = () => {
     <div className="skills_box">
         <div className="skills_group">
             <div className="skills_data">
-                <i class="bx bx-badge-check"></i>
+                <i className="bx bx-badge-check"></i>
             <div>
                 <h3 className="skills_name">Frappe/ERPNext</h3>
-                <span className="skills_level">Intermediat</span>
+                <span className="skills_level">Intermediate</span>
             </div>
             </div>
             <div className="skills_data">
-                <i class="bx bx-badge-check"></i>
+                <i className="bx bx-badge-check"></i>
             <div>
                 <h3 className="skills_name">Python</h3>
-                <span className="skills_level">Intermediat</span>
+                <span className="skills_level">Intermediate</span>
             </div>
             </div>
             <div className="skills_data">
-                <i class="bx bx-badge-check"></i>
+                <i className="bx bx-badge-check"></i>
             <div>
-                <h3 className="skills_name">My SQL</h3>
-                <span className="skills_level">Intermediat</span>
+                <h3 className="skills_name">MySQL</h3>
+                <span className="skills_level">Intermediate</span>
             </div>
             </div>
             <div className="skills_data">
-                <i class="bx bx-badge-check"></i>
+                <i className="bx bx-badge-check"></i>
             <div>
                 <h3 className="skills_name">Firebase</h3>
-                <span className="skills_level">Intermediat</span>
+                <span className="skills_level">Intermediate</span>
             </div>
             </div>
         </div>

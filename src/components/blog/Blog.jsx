@@ -22,23 +22,50 @@ export const Blog = () => {
     }, []);
   
     return (
-      <div className="articles-container container" id='blog'>
-        <h1 className='articles'>Articles by Anil Rajput</h1>
-        <ul>
-          {articles.map(article => (
-            <li className="article" key={article.id}>
-              <div className='articles-img'>
-              <img src={article.cover_image} alt={article.title} /> {/* Added image tag */}
-              </div>
-             
-              <div>
-                <h2>{article.title}</h2>
-                <p>{article.description}</p>
-                <a href={article.url}><button className="buttons">Read more</button></a>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <section className="blog section" id="blog">
+        <h2 className="section_title">Blogs</h2>
+        <span className="section_subtitle">My technical articles</span>
+
+        <div className="articles-container container">
+          <ul>
+            {articles.map(article => (
+              <li className="article" key={article.id}>
+                {article.cover_image && (
+                  <div className='articles-img'>
+                    <img src={article.cover_image} alt={article.title} />
+                  </div>
+                )}
+               
+                <div className="article-content">
+                  <h2>{article.title}</h2>
+                  <div className="article-metadata">
+                    {article.readable_publish_date && (
+                      <span className="article-date">
+                        <i className="uil uil-calendar-alt"></i> {article.readable_publish_date}
+                      </span>
+                    )}
+                    {article.reading_time_minutes && (
+                      <span className="article-reading-time">
+                        <i className="uil uil-clock"></i> {article.reading_time_minutes} min read
+                      </span>
+                    )}
+                  </div>
+                  <p className="article-description">{article.description}</p>
+                  {article.tag_list && article.tag_list.length > 0 && (
+                    <div className="article-tags">
+                      {article.tag_list.map((tag, idx) => (
+                        <span key={idx} className="article-tag">#{tag}</span>
+                      ))}
+                    </div>
+                  )}
+                  <a href={article.url} target="_blank" rel="noopener noreferrer">
+                    <button className="buttons">Read more</button>
+                  </a>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
     );
   };

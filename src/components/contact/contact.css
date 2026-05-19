@@ -20,11 +20,18 @@ padding-bottom: 3rem;
 }
 
 .contact_card {
-    background-color: var(--body-color);
+    background-color: var(--container-color);
     border: 1px solid var(--border-color);
-    padding: 1rem;
+    padding: 1.25rem 1rem;
     border-radius: 0.75rem;
     text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.contact_card:hover {
+    transform: translateY(-3px);
+    border-color: var(--first-color);
 }
 
 .contact_card-icon {
@@ -81,12 +88,19 @@ padding-bottom: 3rem;
     width: 100%;
     height: 100%;
     border: 2px solid var(--border-color);
-    background: none;
+    background-color: rgba(255, 255, 255, 0.02);
     color: var(--text-color);
     outline: none;
     border-radius: 1rem;
     padding: 1.5rem;
     z-index: 1;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+.contact_form-input:focus {
+    border-color: var(--first-color);
+    background-color: rgba(255, 255, 255, 0.04);
 }
 
 .contact_form-tag {
@@ -94,8 +108,10 @@ padding-bottom: 3rem;
     top: -0.75rem;
     left: 1.5rem;
     font-size: var(--small-font-size);
-    padding: 0.25rem;
-    background-color: var(--body-color);
+    padding: 0.1rem 0.5rem;
+    background-color: #000000;
+    border-radius: 0.25rem;
+    border: 1px solid var(--border-color);
     z-index: 10;
 }
 
@@ -145,4 +161,26 @@ padding-bottom: 3rem;
    @media  screen and (max-width: 350px) {
    
    }
+
+.contact_status {
+    margin-top: 1rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    display: block;
+    text-align: center;
+}
+
+.contact_status.success {
+    background-color: hsla(140, 60%, 50%, 0.15);
+    color: hsl(140, 60%, 45%);
+    border: 1px solid hsla(140, 60%, 45%, 0.3);
+}
+
+.contact_status.error {
+    background-color: hsla(0, 60%, 50%, 0.15);
+    color: hsl(0, 60%, 45%);
+    border: 1px solid hsla(0, 60%, 45%, 0.3);
+}
 

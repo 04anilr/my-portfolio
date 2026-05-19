@@ -1,0 +1,285 @@
+/* verification.css */
+
+.verification_section {
+    padding: 6rem 0 2rem;
+}
+
+.verification_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 0;
+    width: 100%;
+}
+
+.verification_connector {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    min-width: 80px;
+}
+
+.connector_line {
+    flex: 1;
+    height: 0;
+    border-bottom: 2px dashed var(--first-color);
+    opacity: 0.8;
+}
+
+.connector_badge {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--first-color-alt);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 112, 243, 0.4);
+    margin: 0 0.5rem;
+    position: relative;
+    z-index: 2;
+}
+
+.connector_badge::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--first-color);
+    z-index: -1;
+}
+
+.connector_badge i {
+    font-size: 2rem;
+    color: #fff;
+    z-index: 1;
+}
+
+/* The Animated Border Card Wrapper */
+.verification_card-wrapper {
+    position: relative;
+    padding: 1px; /* The border thickness */
+    border-radius: 1.25rem;
+    overflow: hidden;
+    width: 450px;
+    max-width: 100%;
+    background-color: var(--border-color); 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* The animating gradient "comet" */
+.verification_card-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg, transparent 75%, hsl(140, 60%, 50%) 100%);
+    animation: spin-comet 3s linear infinite;
+    z-index: 0;
+}
+
+@keyframes spin-comet {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Orange Theme Modifiers */
+.verification_card-wrapper.orange-border::before {
+    background: conic-gradient(from 0deg, transparent 75%, hsl(35, 90%, 55%) 100%);
+}
+
+.verification_badge.badge-orange {
+    background-color: hsla(35, 90%, 55%, 0.15);
+    color: hsl(35, 90%, 55%);
+    border: 1px solid hsla(35, 90%, 55%, 0.3);
+}
+
+.verification_list-status.status-orange {
+    color: hsl(35, 90%, 55%);
+}
+
+/* Blue Action Theme */
+.verification_action.action-blue {
+    background-color: hsla(215, 100%, 60%, 0.05);
+    border: 1px solid hsla(215, 100%, 60%, 0.3);
+}
+
+.verification_action.action-blue .verification_action-icon,
+.verification_action.action-blue .verification_action-link {
+    color: hsl(215, 100%, 60%);
+}
+
+/* The inner card itself */
+.verification_card {
+    position: relative;
+    background-color: var(--container-color);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: calc(1.25rem - 1px);
+    padding: 2rem;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Header */
+.verification_header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.verification_avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--border-color);
+}
+
+.verification_user-info {
+    flex: 1;
+}
+
+.verification_name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+    margin-bottom: 0.1rem;
+}
+
+.verification_role {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+}
+
+.verification_badge {
+    background-color: hsl(140, 60%, 45%);
+    color: #fff;
+    font-size: var(--tiny-font-size);
+    font-weight: var(--font-medium);
+    padding: 0.25rem 0.75rem;
+    border-radius: 1rem;
+}
+
+/* Divider */
+.verification_divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-color);
+}
+
+/* Status List */
+.verification_status-title {
+    font-size: var(--tiny-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.2rem;
+}
+
+.verification_list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.verification_list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+}
+
+.verification_list-status {
+    color: hsl(140, 60%, 50%); /* Green verified text */
+    font-weight: var(--font-medium);
+}
+
+/* Action Box */
+.verification_action {
+    background-color: hsla(140, 60%, 50%, 0.05);
+    border: 1px solid hsla(140, 60%, 50%, 0.3);
+    border-radius: 0.75rem;
+    padding: 1.25rem;
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.verification_action-icon {
+    font-size: 1.5rem;
+    color: hsl(140, 60%, 50%);
+}
+
+.verification_action-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.verification_action-title {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+.verification_action-desc {
+    font-size: var(--tiny-font-size);
+    color: var(--text-color);
+    line-height: 1.5;
+}
+
+.verification_action-link {
+    font-size: var(--small-font-size);
+    color: hsl(140, 60%, 50%);
+    font-weight: var(--font-medium);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+.verification_action-link i {
+    transition: transform 0.3s ease;
+}
+
+.verification_action-link:hover i {
+    transform: translateX(4px);
+}
+
+@media screen and (max-width: 992px) {
+    .verification_container {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .verification_connector {
+        flex-direction: column;
+        height: 100px;
+        width: 2px;
+    }
+
+    .connector_line {
+        height: 100%;
+        width: 2px;
+        background: repeating-linear-gradient(to bottom, var(--first-color) 0, var(--first-color) 6px, transparent 6px, transparent 12px);
+    }
+
+    .connector_badge {
+        margin: 0.5rem 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .verification_card {
+        padding: 1.5rem;
+    }
+}

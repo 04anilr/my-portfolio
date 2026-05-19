@@ -1,24 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./header.css"; 
 import { MdDarkMode } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 import { PiArticleMediumBold } from "react-icons/pi";
 
 const Header = ({theme, toggleTheme}) => {
-/* ================  change background Header  =================== */
-window.addEventListener("scroll", function () {
-    const header = document.querySelector(".header");
-    if (this.scrollY >= 80) header.classList.add("show-header");
-    else header.classList.remove("show-header");
-});
+  /* ================  change background Header  =================== */
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = document.querySelector(".header");
+      if (header) {
+        if (window.scrollY >= 80) header.classList.add("show-header");
+        else header.classList.remove("show-header");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    /* ================  Toggle Menu  =================== */
-    const [toggle, setToggle] = useState(false);
-    const [activeNav, setActiveNav] = useState("#home");
+  /* ================  Toggle Menu  =================== */
+  const [toggle, setToggle] = useState(false);
+  const [activeNav, setActiveNav] = useState("#home");
   return (
 <header className='header'>
     <nav className='nav container'>
-        <a href="index.html" className='nav_logo'>Anilrajput</a>
+        <a href="#home" className='nav_logo'>Anil Rajput</a>
         <div className={toggle ? "nav_menu show-menu" :"nav_menu"}>
             <ul className='nav_list grid'>
                 <li className='nav_item'>
@@ -46,15 +52,15 @@ window.addEventListener("scroll", function () {
                     </a>
                 </li>
                 <li className='nav_item'>
-                    <a href="#portfolio" onClick={() => setActiveNav("#project")} className={activeNav === "#project" ?'nav_link active_link' : "nav_link"}>
+                    <a href="#portfolio" onClick={() => setActiveNav("#portfolio")} className={activeNav === "#portfolio" ?'nav_link active_link' : "nav_link"}>
                         <i className="uil uil-scenery nav_icon"></i>
-                         Project
+                         Projects
                     </a>
                 </li>
                 <li className='nav_item'>
                     <a href="#contact" onClick={() => setActiveNav("#contact")} className={activeNav === "#contact" ?'nav_link active_link' : "nav_link"}>
                         <i className="uil uil-message nav_icon"></i> 
-                        contact
+                        Contact
                     </a>
                 </li>
             </ul>

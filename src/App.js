@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Header from './components/header/Header';
 import { Home } from './components/Home/Home';
@@ -10,8 +10,8 @@ import { Qualification } from './components/qualification/Qualification';
 import { Contact } from './components/contact/Contact';
 import { Footer } from './components/footer/Footer';
 import { ScrollUp } from './components/scrollup/ScrollUp';
-import Work from './components/work/Work';
-import Project from './components/project/Project';
+import { Work } from './components/work/Work';
+import { Project } from './components/project/Project';
 import { Blog } from './components/blog/Blog';
 import React, { useEffect, useState } from 'react';
 import Background from './components/background/Background';
