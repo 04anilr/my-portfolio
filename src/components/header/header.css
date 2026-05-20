@@ -150,3 +150,27 @@
     }
     
 }
+
+/* Nav Controls Area */
+.nav_controls {
+    display: flex;
+    align-items: center;
+    column-gap: 1.25rem;
+}
+
+.light_mode,
+.nav_profile-btn {
+    font-size: 1.3rem;
+    color: var(--title-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.light_mode:hover,
+.nav_profile-btn:hover {
+    color: var(--first-color);
+    transform: scale(1.12);
+}
+

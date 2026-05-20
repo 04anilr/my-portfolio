@@ -4,7 +4,7 @@ import { MdDarkMode } from "react-icons/md";
 import { MdLightMode } from "react-icons/md";
 import { PiArticleMediumBold } from "react-icons/pi";
 
-const Header = ({theme, toggleTheme}) => {
+const Header = ({theme, toggleTheme, onProfileClick}) => {
   /* ================  change background Header  =================== */
   useEffect(() => {
     const handleScroll = () => {
@@ -70,20 +70,25 @@ const Header = ({theme, toggleTheme}) => {
         <div className='nav_toggle' onClick={() => setToggle(!toggle)}>
             <i className='uil uil-apps'></i>
         </div>
-{/*=================== light mode function ============================== */}
-        <div className='light_mode'>
-            <span onClick = {toggleTheme}>
-                {theme === "light-theme" ? (
-                    <span>
-                        <MdDarkMode />
-                    </span>
-                ) : (
-                    <span>
-                       <MdLightMode />
-                    </span>
-                )}
-            </span>
+{/*=================== controls area containing theme and profile ============================== */}
+        <div className="nav_controls">
+            <div className='light_mode'>
+                <span onClick = {toggleTheme}>
+                    {theme === "light-theme" ? (
+                        <span>
+                            <MdDarkMode />
+                        </span>
+                    ) : (
+                        <span>
+                            <MdLightMode />
+                        </span>
+                    )}
+                </span>
+            </div>
 
+            <div className="nav_profile-btn" onClick={onProfileClick} title="Open Developer Profile">
+                <i className="uil uil-user-circle"></i>
+            </div>
         </div>
     </nav>
 </header>

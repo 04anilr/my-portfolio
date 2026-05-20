@@ -15,11 +15,14 @@ import { Project } from './components/project/Project';
 import { Blog } from './components/blog/Blog';
 import React, { useEffect, useState } from 'react';
 import Background from './components/background/Background';
+import { ProfileDrawer } from './components/profile/ProfileDrawer';
 
 function App() {
     const [theme, setTheme] = useState(() => {
         return localStorage.getItem('theme') || 'light-theme';
     });
+    const [isProfileOpen, setIsProfileOpen] = useState(false);
+
     const toggleTheme = () => {
         setTheme((prevTheme) => {
             const newTheme = prevTheme === 'light-theme' ? 'dark-theme' : 'light-theme';
@@ -27,14 +30,23 @@ function App() {
             return newTheme;
         });
     };
+
     useEffect(() => {
         document.body.className = theme;
     }, [theme]);
 
+    // Load saved color accent hue on mount
+    useEffect(() => {
+        const savedHue = localStorage.getItem('theme-hue');
+        if (savedHue) {
+            document.documentElement.style.setProperty('--hue', savedHue);
+        }
+    }, []);
+
     return (
         <>
             <Background />
-            <Header theme={theme} toggleTheme={toggleTheme} />
+            <Header theme={theme} toggleTheme={toggleTheme} onProfileClick={() => setIsProfileOpen(true)} />
             <main className='main'>
                 <Home />
                 <Verification />
@@ -49,6 +61,7 @@ function App() {
             </main>
             <Footer />
             <ScrollUp />
+            <ProfileDrawer isOpen={isProfileOpen} onClose={() => setIsProfileOpen(false)} />
         </>
     );
 }
