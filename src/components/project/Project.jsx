@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './project.css';
 
-
 export const Project = () => {
   const [articles, setArticles] = useState([]);
   const maxArticlesToShow = 6;
@@ -23,20 +22,43 @@ export const Project = () => {
   }, []);
 
   return (
-    <div className="container">
-      <h1 className='articles'>Articles by Anil Rajput</h1>
-      <ul>
-        {articles.map(article => (
-          <li className="article" key={article.id}>
-            <img src={article.cover_image} alt={article.title} /> {/* Added image tag */}
-            <div>
-              <h2>{article.title}</h2>
-              <p>{article.description}</p>
-              <a href={article.url}><button className="buttons">Read more</button></a>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <section className="project-section section" id="articles-section">
+      <h2 className="section_title">Articles by Anil Rajput</h2>
+      <span className="section_subtitle">My recent write-ups</span>
+
+      <div className="project-articles__container container">
+        <ul className="project-articles__list">
+          {articles.map(article => (
+            <li className="project-article-card" key={article.id}>
+              <div className="project-article-card__img-wrapper">
+                {article.cover_image ? (
+                  <img 
+                    src={article.cover_image} 
+                    alt={article.title} 
+                    className="project-article-card__img"
+                  />
+                ) : (
+                  <div className="project-article-card__img-fallback">
+                    <i className="uil uil-file-alt"></i>
+                  </div>
+                )}
+              </div>
+              <div className="project-article-card__content">
+                <h3 className="project-article-card__title">{article.title}</h3>
+                <p className="project-article-card__description">{article.description}</p>
+                <a 
+                  href={article.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="project-article-card__link"
+                >
+                  <button className="project-article-card__btn">Read more</button>
+                </a>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 };

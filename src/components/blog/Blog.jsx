@@ -30,11 +30,15 @@ export const Blog = () => {
           <ul>
             {articles.map(article => (
               <li className="article" key={article.id}>
-                {article.cover_image && (
-                  <div className='articles-img'>
+                <div className='articles-img'>
+                  {article.cover_image ? (
                     <img src={article.cover_image} alt={article.title} />
-                  </div>
-                )}
+                  ) : (
+                    <div className="articles-img-fallback">
+                      <i className="uil uil-file-alt"></i>
+                    </div>
+                  )}
+                </div>
                
                 <div className="article-content">
                   <h2>{article.title}</h2>
