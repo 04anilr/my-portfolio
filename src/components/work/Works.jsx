@@ -10,6 +10,13 @@ export const Works = () => {
   const [active, setActive] = useState(0);
   const [selectedProject, setSelectedProject] = useState(null);
 
+  const getCategoryCount = (categoryName) => {
+    if (categoryName.toLowerCase() === 'all') {
+      return projectsData.length;
+    }
+    return projectsData.filter(proj => proj.category.toLowerCase() === categoryName.toLowerCase()).length;
+  };
+
   useEffect(() => {
     if(item.name === 'all') {
       setProjects(projectsData);
@@ -24,7 +31,9 @@ export const Works = () => {
   },[item]);
 
   const handleClick = (e, index) => {
-    setItem({ name: e.target.textContent.toLowerCase() });
+    // Extract category name properly ignoring nested elements
+    const categoryText = projectsNav[index].name.toLowerCase();
+    setItem({ name: categoryText });
     setActive(index);
   };
 
@@ -36,7 +45,9 @@ export const Works = () => {
           <span onClick={(e) => {
             handleClick(e, index);
           }} className={`${active === index ? 'active-work' : ''} work_item`}
-           key={index}>{item.name}</span>
+           key={index}>
+            {item.name} <span className="work_item-count">{getCategoryCount(item.name)}</span>
+          </span>
         );
       })}
     </div>
