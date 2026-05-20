@@ -1,6 +1,6 @@
 import React from 'react';
 import './aboutpage.css';
-import AboutImg from "../../assets/profile-pic (4).png";
+import AboutImg from "../../assets/about.png";
 
 export const AboutPage = () => {
   const handleBackToPortfolio = (e) => {

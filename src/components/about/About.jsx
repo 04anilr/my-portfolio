@@ -1,6 +1,6 @@
 import React from 'react';
 import "./about.css";
-import AboutImg from "../../assets/profile-pic (4).png";
+import AboutImg from "../../assets/about.png";
 import { Info } from './Info';
 import { FaArrowCircleDown } from "react-icons/fa";
 

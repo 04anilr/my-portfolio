@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './verification.css';
-import ProfilePic from '../../assets/profile-pic (4).png';
+import ProfilePic from '../../assets/about.png';
 
 const QUIZ_QUESTIONS = [
   {

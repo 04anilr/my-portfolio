@@ -24,7 +24,10 @@ const Header = ({ theme, toggleTheme, onProfileClick }) => {
     return (
         <header className='header'>
             <nav className='nav container'>
-                <a href="#home" className='nav_logo'>Anil Rajput</a>
+                <a href="#home" className='nav_logo'>
+                    <span className="nav_logo-badge">AR</span>
+                    <span className="nav_logo-text">Anil <span className="nav_logo-accent">Rajput</span></span>
+                </a>
                 <div className={toggle ? "nav_menu show-menu" : "nav_menu"}>
                     <ul className='nav_list grid'>
                         <li className='nav_item'>
@@ -61,6 +64,12 @@ const Header = ({ theme, toggleTheme, onProfileClick }) => {
                             <a href="#portfolio" onClick={() => setActiveNav("#portfolio")} className={activeNav === "#portfolio" ? 'nav_link active_link' : "nav_link"}>
                                 <i className="uil uil-scenery nav_icon"></i>
                                 Projects
+                            </a>
+                        </li>
+                        <li className='nav_item'>
+                            <a href="#/admin" onClick={() => setActiveNav("#/admin")} className={activeNav === "#/admin" ? 'nav_link active_link' : "nav_link"}>
+                                <i className="uil uil-book-reader nav_icon"></i>
+                                Library
                             </a>
                         </li>
                         <li className='nav_item'>
