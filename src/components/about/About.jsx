@@ -21,9 +21,14 @@ I create web pages with <span className='about_title'>React</span> and <span cla
 I have one year of experience, and many clients are happy with the projects I've carried out.
 
                         </p>
-                        <a download="" href={CV} className="button button--flex">
-                            Download CV <FaArrowCircleDown className='cv-icon' />
-                        </a>
+                        <div className="about_buttons">
+                            <a download="" href={CV} className="button button--flex">
+                                Download CV <FaArrowCircleDown className='cv-icon' />
+                            </a>
+                            <a href="#/about" onClick={() => window.location.hash = '#/about'} className="button button--flex button--outline about_bio-btn">
+                                Read Full Bio <i className="uil uil-arrow-right button_icon"></i>
+                            </a>
+                        </div>
                 </div>
             </div>
         </section>

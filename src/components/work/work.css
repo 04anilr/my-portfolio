@@ -13,11 +13,30 @@
     font-weight: var(--font-medium);
     border-radius: 0.5rem;
     text-transform: capitalize;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
 }
 .work_item:hover {
     background-color: var(--text-color);
     color: var(--container-color);
 }
+
+.work_item-count {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--text-color);
+    font-size: var(--tiny-font-size);
+    padding: 0.1rem 0.4rem;
+    border-radius: 2rem;
+    font-weight: var(--font-semi-bold);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.active-work .work_item-count {
+    background-color: var(--container-color);
+    color: var(--first-color);
+}
+
 
 .work_container {
     grid-template-columns: repeat(2, max-content);

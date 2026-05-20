@@ -150,3 +150,41 @@
     }
     
 }
+
+/* Nav Controls Area */
+.nav_controls {
+    display: flex;
+    align-items: center;
+    column-gap: 1.25rem;
+}
+
+.light_mode,
+.nav_profile-btn {
+    font-size: 1.3rem;
+    color: var(--title-color);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.light_mode:hover,
+.nav_profile-btn:hover {
+    color: var(--first-color);
+    transform: scale(1.12);
+}
+
+.nav_profile-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--first-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.nav_profile-btn:hover .nav_profile-img {
+    border-color: var(--title-color);
+    transform: scale(1.1);
+}

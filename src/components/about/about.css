@@ -92,3 +92,34 @@
     grid-template-columns: repeat(2, 1fr);
   }
   }
+
+.about_buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.about_bio-btn {
+    background-color: transparent;
+    border: 2px solid var(--first-color);
+    color: var(--first-color);
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.about_bio-btn:hover {
+    background-color: var(--first-color);
+    color: #fff;
+}
+
+@media screen and (max-width: 992px) {
+    .about_buttons {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .about_buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
