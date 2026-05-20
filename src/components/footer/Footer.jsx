@@ -14,11 +14,31 @@ export const Footer = () => {
                 </li>
 
                 <li>
+                    <a href="#skills" className="footer_link">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#services" className="footer_link">Services</a>
+                </li>
+
+                <li>
                     <a href="#portfolio" className="footer_link">Projects</a>
                 </li>
 
                 <li>
-                    <a href="#skills" className="footer_link">Skills</a>
+                    <a href="#qualification" className="footer_link">Qualification</a>
+                </li>
+
+                <li>
+                    <a href="#blog" className="footer_link">Blog</a>
+                </li>
+
+                <li>
+                    <a href="#/admin" className="footer_link">Library</a>
+                </li>
+
+                <li>
+                    <a href="#contact" className="footer_link">Contact</a>
                 </li>
             </ul>
 

@@ -21,6 +21,7 @@ import React, { useEffect, useState } from 'react';
 import Background from './components/background/Background';
 import { ProfileDrawer } from './components/profile/ProfileDrawer';
 import { Hud } from './components/hud/Hud';
+import { DocumentUpload } from './components/admin/DocumentUpload';
 
 function App() {
     const [theme, setTheme] = useState(() => {
@@ -31,6 +32,7 @@ function App() {
         const hash = window.location.hash;
         if (hash === '#/playground') return 'playground';
         if (hash === '#/about') return 'about';
+        if (hash === '#/admin') return 'admin';
         return 'home';
     });
 
@@ -42,6 +44,9 @@ function App() {
                 window.scrollTo(0, 0);
             } else if (hash === '#/about') {
                 setCurrentPage('about');
+                window.scrollTo(0, 0);
+            } else if (hash === '#/admin') {
+                setCurrentPage('admin');
                 window.scrollTo(0, 0);
             } else {
                 setCurrentPage('home');
@@ -78,7 +83,7 @@ function App() {
             {currentPage === 'home' && (
                 <Header theme={theme} toggleTheme={toggleTheme} onProfileClick={() => setIsProfileOpen(true)} />
             )}
-            
+
             {currentPage === 'home' ? (
                 <main className='main'>
                     <Home />
@@ -96,6 +101,10 @@ function App() {
             ) : currentPage === 'playground' ? (
                 <main className='main standalone-playground-page'>
                     <JsTutorial />
+                </main>
+            ) : currentPage === 'admin' ? (
+                <main className='main standalone-admin-page'>
+                    <DocumentUpload />
                 </main>
             ) : (
                 <main className='main standalone-about-page'>

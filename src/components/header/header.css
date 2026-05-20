@@ -14,7 +14,39 @@
     align-items: center;
     column-gap: 1rem;
 }
-.nav_logo,
+.nav_logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.nav_logo-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 0.6rem;
+    background: var(--first-color);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+.nav_logo-text {
+    font-weight: var(--font-semi-bold);
+    font-size: 1.1rem;
+    color: var(--title-color);
+    letter-spacing: 0.5px;
+}
+
+.nav_logo-accent {
+    color: var(--first-color);
+}
+
 .nav_toggle {
     color: var(--title-color);
     font-weight: var(--font-medium);
