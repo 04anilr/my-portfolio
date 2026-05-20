@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './profile.css';
-import profileImg from '../../assets/profile.jpg';
+import profileImg from '../../assets/about.png';
 
 export const ProfileDrawer = ({ isOpen, onClose }) => {
   const [hue, setHue] = useState(() => {
