@@ -16,6 +16,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
+    white-space: nowrap;
 }
 .work_item:hover {
     background-color: var(--text-color);
@@ -166,6 +167,20 @@ margin-bottom: var(--mb-0-5);
  .work_img {
     width: 100%;
  }
+   }
+   @media screen and (max-width: 768px) {
+    /* Make the filter tabs a swipeable, scrollable row instead of overflowing */
+    .work_filters {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding-bottom: 0.25rem;
+    }
+    .work_filters::-webkit-scrollbar {
+        display: none;
+    }
    }
    @media screen and (max-width: 350px) {
     .work_item {

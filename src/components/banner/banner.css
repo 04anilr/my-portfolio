@@ -132,10 +132,18 @@
 
 @media screen and (max-width: 768px) {
     .banner-slider {
-        padding-top: calc(var(--header-height) + 2rem);
+        /* Header sits at the bottom on mobile, so far less top space is needed */
+        padding-top: 1rem;
     }
     .banner-slider_viewport {
         border-radius: 0.6rem;
+    }
+    /* The banners are very wide; give them real height and show the
+       left side (headline) instead of collapsing to an unreadable strip */
+    .banner-slider_slide img {
+        height: 190px;
+        object-fit: cover;
+        object-position: left center;
     }
     .banner-slider_arrow {
         width: 2rem;
@@ -144,5 +152,11 @@
     }
     .banner-slider_progress {
         width: 60%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner-slider_slide img {
+        height: 150px;
     }
 }
