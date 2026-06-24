@@ -70,7 +70,30 @@ export const Works = () => {
           <p className="services_modal-description" style={{ marginTop: '1rem', padding: '0 1rem', textAlign: 'left' }}>
             {selectedProject.description}
           </p>
-          
+
+          {(selectedProject.problem || selectedProject.solution || selectedProject.result) && (
+            <div className="project_case">
+              {selectedProject.problem && (
+                <div className="project_case-block project_case-block--problem">
+                  <h4 className="project_case-label">Problem</h4>
+                  <p className="project_case-text">{selectedProject.problem}</p>
+                </div>
+              )}
+              {selectedProject.solution && (
+                <div className="project_case-block project_case-block--solution">
+                  <h4 className="project_case-label">Solution</h4>
+                  <p className="project_case-text">{selectedProject.solution}</p>
+                </div>
+              )}
+              {selectedProject.result && (
+                <div className="project_case-block project_case-block--result">
+                  <h4 className="project_case-label">Result</h4>
+                  <p className="project_case-text">{selectedProject.result}</p>
+                </div>
+              )}
+            </div>
+          )}
+
           <div className="project_modal-tech">
             <h4 className="project_modal-tech-title">Technologies Used</h4>
             <div className="project_modal-tags">
@@ -79,14 +102,23 @@ export const Works = () => {
               ))}
             </div>
           </div>
-          
+
           <div className="project_modal-actions">
-            <a href={selectedProject.demoLink} className="button button--flex" target="_blank" rel="noopener noreferrer">
-              Demo <i className="bx bx-link-external button_icon"></i>
-            </a>
-            <a href={selectedProject.githubLink} className="button button--flex" target="_blank" rel="noopener noreferrer">
-              Code <i className="bx bxl-github button_icon"></i>
-            </a>
+            {selectedProject.demoLink && (
+              <a href={selectedProject.demoLink} className="button button--flex" target="_blank" rel="noopener noreferrer">
+                Live Demo <i className="bx bx-link-external button_icon"></i>
+              </a>
+            )}
+            {selectedProject.githubLink && (
+              <a href={selectedProject.githubLink} className="button button--flex button--outline" target="_blank" rel="noopener noreferrer">
+                Code <i className="bx bxl-github button_icon"></i>
+              </a>
+            )}
+            {selectedProject.videoLink && (
+              <a href={selectedProject.videoLink} className="button button--flex button--outline" target="_blank" rel="noopener noreferrer">
+                Video <i className="bx bx-play-circle button_icon"></i>
+              </a>
+            )}
           </div>
         </div>
       </div>

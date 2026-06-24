@@ -249,16 +249,35 @@ img {
 /* =========== BUTTONS =============== */
 .button {
   display: inline-block;
-  background-color: var(--body-color);
-  color: var(--title-color-dark);
-  padding: 1rem 1.25rem;
-  border: 2px solid var(--text-color);
-  border-radius: 1rem;
+  background-color: var(--first-color);
+  color: #fff;
+  padding: 0.9rem 1.5rem;
+  border: 2px solid var(--first-color);
+  border-radius: 0.85rem;
   font-weight: var(--font-medium);
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease,
+    transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .button:hover {
-  background-color: var(--container-color);
+  background-color: var(--first-color-alt);
+  border-color: var(--first-color-alt);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px -12px hsla(var(--hue), var(--sat), 50%, 0.6);
+}
+
+/* Secondary / outline button */
+.button--outline {
+  background-color: transparent;
+  color: var(--first-color);
+  border-color: var(--first-color);
+}
+
+.button--outline:hover {
+  background-color: hsla(var(--hue), var(--sat), 60%, 0.1);
+  color: var(--first-color);
+  box-shadow: none;
 }
 
 .button_icon {

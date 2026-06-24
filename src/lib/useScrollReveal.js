@@ -33,7 +33,7 @@ const REVEAL_CONFIG = [
 
     // Skills / Services cards
     { selector: '.skills_content', dir: 'alt', stagger: 120 },
-    { selector: '.services_content', dir: 'up', stagger: 130 },
+    { selector: '.services_card', dir: 'up', stagger: 80 },
 
     // Qualification timeline
     { selector: '.qualification_data', dir: 'alt', stagger: 120 },
@@ -43,6 +43,11 @@ const REVEAL_CONFIG = [
     { selector: '.work_card', dir: 'up', stagger: 90 },
     { selector: '.project-article-card', dir: 'up', stagger: 90 },
     { selector: '.article', dir: 'up', stagger: 90 },
+
+    // Trust & social proof
+    { selector: '.stats_container', dir: 'scale' },
+    { selector: '.clients_card', dir: 'up', stagger: 110 },
+    { selector: '.testimonials_card', dir: 'up', stagger: 110 },
 
     // Contact
     { selector: '.contact_card', dir: 'left', stagger: 110 },
