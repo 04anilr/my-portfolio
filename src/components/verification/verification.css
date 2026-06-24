@@ -258,7 +258,14 @@
 @media screen and (max-width: 992px) {
     .verification_container {
         flex-direction: column;
+        align-items: center;
         gap: 0;
+    }
+
+    .verification_card-wrapper {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .verification_connector {
