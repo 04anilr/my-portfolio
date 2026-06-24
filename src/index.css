@@ -123,6 +123,8 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--body-font);
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -132,6 +134,9 @@ body {
   color: var(--title-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Clip the transient slide-in transforms so they don't create a
+     horizontal scroll that shifts centered sections off-center. */
+  overflow-x: hidden;
 }
 
 code {
@@ -191,6 +196,15 @@ img {
 .sr--visible {
   opacity: 1;
   transform: none;
+}
+
+/* On mobile, slide everything up instead of sideways so nothing can
+   overflow horizontally or look off-center during the animation. */
+@media screen and (max-width: 768px) {
+  .sr--left,
+  .sr--right {
+    transform: translateY(40px);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
