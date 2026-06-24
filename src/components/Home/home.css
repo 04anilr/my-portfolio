@@ -316,9 +316,30 @@
         width: 100%;
     }
 
+    /* Stack the card and the social strip vertically, centered */
     .home_visual {
         order: 1;
         width: 100%;
+        flex-direction: column;
+    }
+
+    /* Social strip: centered horizontal row below the card */
+    .home_social {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        justify-content: center;
+        margin: 2.25rem auto 0;
+        width: max-content;
+        max-width: 100%;
+    }
+
+    /* Keep the "Available for Hire" badge centered and on one line */
+    .home_badge {
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -0.9rem;
+        white-space: nowrap;
     }
 
     .home_eyebrow,
@@ -353,22 +374,6 @@
 @media screen and (max-width: 576px) {
     .home_stats {
         grid-template-columns: 1fr;
-    }
-
-    /* Social strip becomes a centered horizontal row below the card */
-    .home_social {
-        position: static;
-        transform: none;
-        flex-direction: row;
-        justify-content: center;
-        margin: 1.25rem auto 0;
-        width: max-content;
-    }
-
-    .home_badge {
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -0.8rem;
     }
 }
 

@@ -306,6 +306,11 @@ img {
 
 /* for medium device */
 @media screen and (max-width: 768px) {
+  :root {
+    --big-font-size: 2.5rem;
+    --h1-font-size: 1.75rem;
+    --h2-font-size: 1.35rem;
+  }
   body {
     margin: 0 0 var(--header-height) 0;
   }
@@ -318,9 +323,15 @@ img {
 }
 
 /* for small device */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 480px) {
   :root {
     --big-font-size: 2.25rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  :root {
+    --big-font-size: 2rem;
   }
   .container {
     margin-left: var(--mb-1);
