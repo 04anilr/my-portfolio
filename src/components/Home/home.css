@@ -27,6 +27,7 @@
 .home_title {
     font-size: var(--big-font-size);
     margin-bottom: var(--mb-0-25);
+    
 }
 
 .home_hand {
@@ -46,6 +47,102 @@
 .home_description {
     max-width: 400px;
     margin-bottom: var(--mb-2);
+}
+
+.home_tagline {
+    max-width: 460px;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1-5);
+}
+
+.home_tagline-accent {
+    color: var(--first-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.home_subtitle-company {
+    display: block;
+    font-size: var(--small-font-size);
+    color: var(--first-color);
+    font-weight: var(--font-medium);
+    margin-top: 0.15rem;
+}
+
+.home_description strong {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.home_tags {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: var(--mb-1-5);
+}
+
+.home_tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.home_tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.85rem;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+    background-color: var(--container-color);
+    border: 1px solid hsla(var(--hue), var(--sat), 60%, 0.25);
+    border-radius: 2rem;
+    transition: transform 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+}
+
+.home_tag:hover {
+    transform: translateY(-2px);
+    border-color: var(--first-color);
+    color: var(--first-color);
+}
+
+.home_tag--tech {
+    color: var(--first-color);
+    border-color: hsla(var(--hue), var(--sat), 60%, 0.4);
+    background-color: hsla(var(--hue), var(--sat), 60%, 0.08);
+}
+
+.home_highlights {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: var(--mb-2);
+    padding: 0;
+}
+
+.home_highlight {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+}
+
+.home_highlight-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 1.15rem;
+    height: 1.15rem;
+    padding: 0.18rem;
+    font-size: 0.7rem;
+    color: #fff;
+    background-color: var(--first-color);
+    border-radius: 50%;
 }
 
 .home_subtitle::before {
