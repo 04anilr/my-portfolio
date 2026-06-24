@@ -1,10 +1,20 @@
 import React from 'react';
 import { LuSend } from "react-icons/lu";
-import { FaCheck } from "react-icons/fa6";
+import { FaUserCheck, FaLayerGroup, FaUsers } from "react-icons/fa6";
+
+const STATS = [
+    { icon: <FaUserCheck />, title: '2+ Years Experience', sub: 'Software Engineering' },
+    { icon: <FaLayerGroup />, title: 'Full Stack Engineer', sub: 'End-to-end Solutions' },
+    { icon: <FaUsers />, title: '500+ Connections', sub: 'LinkedIn Professional Network' },
+];
 
 export const Data = () => {
   return (
     <div className="home_data">
+        <span className="home_eyebrow">
+            <span className="home_eyebrow-line"></span>
+            SOFTWARE ARCHITECT
+        </span>
         <h1 className="home_title">Anil Rajput
         <svg
                   width="36"
@@ -60,12 +70,10 @@ export const Data = () => {
             ERPNext &amp; Full Stack Developer
             <span className="home_subtitle-company">@ Hybrowlabs Technologies</span>
         </h3>
-        <p className="home_tagline">
-            Helping businesses automate operations with{' '}
-            <span className="home_tagline-accent">ERPNext</span> and modern web applications.
-        </p>
         <p className="home_description">
-            Built <strong>HRMS, Payroll, CRM &amp; Recruitment</strong> solutions.
+            Helping businesses automate operations with{' '}
+            <strong>ERPNext</strong> and modern web applications. Specialized in
+            building <strong>HRMS, Payroll, CRM &amp; Recruitment</strong> solutions.
         </p>
         <div className="home_tags">
             <div className="home_tags-row">
@@ -79,21 +87,25 @@ export const Data = () => {
                 ))}
             </div>
         </div>
-        <ul className="home_highlights">
-            {[
-                '2+ Years Experience',
-                'Full Stack Engineer',
-                '500+ LinkedIn Connections',
-            ].map((item) => (
-                <li className="home_highlight" key={item}>
-                    <FaCheck className="home_highlight-icon" />
-                    {item}
-                </li>
+        <div className="home_stats">
+            {STATS.map((stat) => (
+                <div className="home_stat" key={stat.title}>
+                    <span className="home_stat-icon">{stat.icon}</span>
+                    <div className="home_stat-text">
+                        <h4 className="home_stat-title">{stat.title}</h4>
+                        <span className="home_stat-sub">{stat.sub}</span>
+                    </div>
+                </div>
             ))}
-        </ul>
-        <a href="#contact" className="button button--flex">
-        Let's Discuss Your Project<LuSend className='send-icon'/>
-        </a>
+        </div>
+        <div className="home_cta">
+            <a href="#contact" className="button button--flex">
+                Let's Discuss Your Project<LuSend className='send-icon' />
+            </a>
+            <a href="#about" className="home_scroll-link">
+                <i className="uil uil-arrow-down"></i> Scroll Down
+            </a>
+        </div>
     </div>
   )
 }

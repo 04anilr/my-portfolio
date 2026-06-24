@@ -23,8 +23,8 @@ const REVEAL_CONFIG = [
 
     // Hero
     { selector: '.banner-slider_viewport', dir: 'scale' },
-    { selector: '.home_social', dir: 'left' },
-    { selector: '.home_data', dir: 'right' },
+    { selector: '.home_data', dir: 'left' },
+    { selector: '.home_visual', dir: 'right' },
 
     // About
     { selector: '.about_img', dir: 'left' },
