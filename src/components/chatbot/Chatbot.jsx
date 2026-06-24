@@ -12,12 +12,12 @@ const STATIC_KNOWLEDGE_BASE = {
     response: "Anil is a highly capable Full-Stack Engineer! 💻 His core stack includes:\n\n• Frontend: React.js, Next.js, JavaScript (ES6+), HTML5, CSS3, Tailwind\n• Backend: Python, Node.js, FastAPI, Frappe Framework, ERPNext development\n• Database: PostgreSQL, MySQL, MongoDB\n• Tools: Git, Docker, Vercel, Supabase\n\nHe is equally comfortable building sleek, modern user interfaces and engineering high-performance APIs!"
   },
   experience: {
-    keywords: ["experience", "work", "job", "current", "hybrowlabs", "ssde", "role", "years", "physics wallah", "pw"],
-    response: "Anil has over 2 years of professional experience! 💼\n\nCurrently, he works as an SSDE (Software Support & Development Engineer) at Hybrowlabs Technologies. He is actively contributing to enterprise-level HRMS and Recruitment Management Systems for Physics Wallah (PW), developing features for employee management and recruitment workflows."
+    keywords: ["experience", "work", "job", "current", "hybrowlabs", "ssde", "role", "years",],
+    response: "Anil has over 2 years of professional experience! 💼\n\nCurrently, he works as an SSDE (Software Support & Development Engineer) at Hybrowlabs Technologies. He is actively contributing to enterprise-level HRMS and Recruitment Management Systems for HRMS, developing features for employee management and recruitment workflows."
   },
   projects: {
     keywords: ["projects", "portfolio", "contributions", "holiday trip", "lbf", "iskcon", "works", "what did he build", "github user finder", "google clone", "weather app"],
-    response: "Anil has contributed to several notable projects across diverse domains! 🚀\n\n• HRMS & Recruitment (Physics Wallah): Scaling workflows, employee modules, and user interfaces.\n• Holiday Trip: Comprehensive booking and travel management.\n• GitHub User Finder & Google Clone: Interactive React web apps integrating complex external APIs.\n• Full-Stack Apps: Built a Weather App, Flashcard App, and a functional Instagram Clone!\n\nYou can see these in the 'Portfolio' section above!"
+    response: "Anil has contributed to several notable projects across diverse domains! 🚀\n\n• HRMS & Recruitment (HRMS): Scaling workflows, employee modules, and user interfaces.\n• Holiday Trip: Comprehensive booking and travel management.\n• GitHub User Finder & Google Clone: Interactive React web apps integrating complex external APIs.\n• Full-Stack Apps: Built a Weather App, Flashcard App, and a functional Instagram Clone!\n\nYou can see these in the 'Portfolio' section above!"
   },
   education: {
     keywords: ["education", "college", "university", "degree", "btech", "b.tech", "cse", "invertis"],

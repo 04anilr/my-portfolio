@@ -95,7 +95,7 @@ export const AboutPage = () => {
                 <i className="uil uil-layer-group"></i> Active Contributions
               </h3>
               <p className="about-article__text">
-                At present, I am actively working on HRMS and Recruitment Management systems for Physics Wallah, where I contribute to developing and enhancing modules related to employee management, recruitment workflows, user interfaces, and system integrations. My role involves building scalable features, improving application performance, and ensuring smooth user experiences for enterprise-level platforms.
+                At present, I am actively working on HRMS and Recruitment Management systems for HRMS, where I contribute to developing and enhancing modules related to employee management, recruitment workflows, user interfaces, and system integrations. My role involves building scalable features, improving application performance, and ensuring smooth user experiences for enterprise-level platforms.
               </p>
             </div>
 
@@ -105,7 +105,7 @@ export const AboutPage = () => {
                 <i className="uil uil-globe"></i> Domain & Projects Experience
               </h3>
               <p className="about-article__text">
-                Apart from enterprise systems, I have also worked on a variety of projects across different industries and domains. Some of the notable projects I have contributed to include Holiday Trip, LBF Logistica, ISKCON Temple management-related solutions, and several other business applications. These projects allowed me to work on diverse functionalities such as management systems, workflow automation, dashboards, API integrations, and responsive user interfaces.
+                Apart from enterprise systems, I have also worked on a variety of projects across different industries and domains. Some of the notable projects I have contributed to include HRMS, ERPNext  management-related solutions, and several other business applications. These projects allowed me to work on diverse functionalities such as management systems, workflow automation, dashboards, API integrations, and responsive user interfaces.
               </p>
             </div>
 
