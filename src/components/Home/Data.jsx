@@ -1,5 +1,6 @@
 import React from 'react';
 import { LuSend } from "react-icons/lu";
+import { FaCheck } from "react-icons/fa6";
 
 export const Data = () => {
   return (
@@ -55,12 +56,43 @@ export const Data = () => {
                   ></path>
                 </svg>
         </h1>
-        <h3 className="home_subtitle">Software Developer @Hybrowlabs Technology</h3>
-        <p className="home_description">
-            I'm very passionate and dedicated to my work. 
+        <h3 className="home_subtitle">
+            ERPNext &amp; Full Stack Developer
+            <span className="home_subtitle-company">@ Hybrowlabs Technologies</span>
+        </h3>
+        <p className="home_tagline">
+            Helping businesses automate operations with{' '}
+            <span className="home_tagline-accent">ERPNext</span> and modern web applications.
         </p>
+        <p className="home_description">
+            Built <strong>HRMS, Payroll, CRM &amp; Recruitment</strong> solutions.
+        </p>
+        <div className="home_tags">
+            <div className="home_tags-row">
+                {['HRMS', 'Payroll', 'CRM', 'Recruitment'].map((tag) => (
+                    <span className="home_tag" key={tag}>{tag}</span>
+                ))}
+            </div>
+            <div className="home_tags-row">
+                {['Frappe ERPNext', 'React.js', 'Next.js'].map((tag) => (
+                    <span className="home_tag home_tag--tech" key={tag}>{tag}</span>
+                ))}
+            </div>
+        </div>
+        <ul className="home_highlights">
+            {[
+                '2+ Years Experience',
+                'Full Stack Engineer',
+                '500+ LinkedIn Connections',
+            ].map((item) => (
+                <li className="home_highlight" key={item}>
+                    <FaCheck className="home_highlight-icon" />
+                    {item}
+                </li>
+            ))}
+        </ul>
         <a href="#contact" className="button button--flex">
-            Say Hello<LuSend className='send-icon'/>
+        Let's Discuss Your Project<LuSend className='send-icon'/>
         </a>
     </div>
   )

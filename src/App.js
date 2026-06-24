@@ -2,6 +2,7 @@
 import './App.css';
 import Header from './components/header/Header';
 import { Home } from './components/Home/Home';
+import { BannerSlider } from './components/banner/BannerSlider';
 import Verification from './components/verification/Verification';
 import { About } from './components/about/About';
 import { Skills } from './components/skills/Skills';
@@ -22,6 +23,7 @@ import Background from './components/background/Background';
 import { ProfileDrawer } from './components/profile/ProfileDrawer';
 import { Hud } from './components/hud/Hud';
 import { DocumentUpload } from './components/admin/DocumentUpload';
+import { useScrollReveal } from './lib/useScrollReveal';
 
 function App() {
     const [theme, setTheme] = useState(() => {
@@ -69,6 +71,9 @@ function App() {
         document.body.className = theme;
     }, [theme]);
 
+    // Scroll-reveal animations across the whole portfolio
+    useScrollReveal();
+
     // Load saved color accent hue on mount
     useEffect(() => {
         const savedHue = localStorage.getItem('theme-hue');
@@ -86,6 +91,7 @@ function App() {
 
             {currentPage === 'home' ? (
                 <main className='main'>
+                    <BannerSlider />
                     <Home />
                     <Verification />
                     <About />
