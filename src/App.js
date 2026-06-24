@@ -23,6 +23,10 @@ import Background from './components/background/Background';
 import { ProfileDrawer } from './components/profile/ProfileDrawer';
 import { Hud } from './components/hud/Hud';
 import { DocumentUpload } from './components/admin/DocumentUpload';
+import { ScrollProgress } from './components/scrollprogress/ScrollProgress';
+import { Stats } from './components/stats/Stats';
+import { Clients } from './components/clients/Clients';
+import { Testimonials } from './components/testimonials/Testimonials';
 import { useScrollReveal } from './lib/useScrollReveal';
 
 function App() {
@@ -84,6 +88,7 @@ function App() {
 
     return (
         <>
+            <ScrollProgress />
             <Background />
             {currentPage === 'home' && (
                 <Header theme={theme} toggleTheme={toggleTheme} onProfileClick={() => setIsProfileOpen(true)} />
@@ -93,12 +98,15 @@ function App() {
                 <main className='main'>
                     <BannerSlider />
                     <Home />
+                    <Stats />
+                    <Clients />
                     <Verification />
                     <About />
                     <Skills />
                     <Services />
                     <Qualification />
                     <Work />
+                    <Testimonials />
                     <Project />
                     <Blog />
                     <JsPlaygroundCta />

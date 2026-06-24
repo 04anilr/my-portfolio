@@ -57,20 +57,59 @@
     border-color: var(--first-color);
 }
 
-.work_img {
+.work_img-wrapper {
+    position: relative;
     width: 295px;
+    max-width: 100%;
     border-radius: 1rem;
+    overflow: hidden;
     margin-bottom: var(--mb-1);
-    border: 1px solid rgb(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+.work_img {
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
     transition: .5s;
 }
 .work_img:hover {
-    transform: scale(1.1);
+    transform: scale(1.08);
+}
+
+.work_badge {
+    position: absolute;
+    top: 0.6rem;
+    left: 0.6rem;
+    padding: 0.25rem 0.65rem;
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-semi-bold);
+    color: #fff;
+    background-color: var(--first-color);
+    border-radius: 2rem;
+    box-shadow: 0 6px 14px -6px hsla(var(--hue), var(--sat), 50%, 0.7);
+}
+
+.work_tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-bottom: var(--mb-1);
+}
+
+.work_tech-badge {
+    font-size: var(--smaller-font-size);
+    font-weight: var(--font-medium);
+    color: var(--first-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 2rem;
+    background-color: hsla(var(--hue), var(--sat), 60%, 0.1);
+    border: 1px solid hsla(var(--hue), var(--sat), 60%, 0.25);
 }
 
 .work_title {
     font-size: var(--normal-font-size);
-font-weight: var(--font-medium);
+font-weight: var(--font-semi-bold);
 margin-bottom: var(--mb-0-5);
 }
 
@@ -199,5 +238,49 @@ margin-bottom: var(--mb-0-5);
     padding: 0.6rem 1.2rem;
     font-size: var(--small-font-size);
     border-radius: 0.5rem;
+}
+
+/* ===== Case study Problem / Solution / Result ===== */
+.project_case {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    padding: 0 1rem;
+    margin-top: 1.25rem;
+    text-align: left;
+}
+
+.project_case-block {
+    padding: 0.85rem 1rem;
+    border-radius: 0.75rem;
+    border-left: 3px solid var(--first-color);
+    background-color: var(--container-color);
+}
+
+.project_case-block--problem {
+    border-left-color: hsl(0, 70%, 55%);
+}
+
+.project_case-block--solution {
+    border-left-color: hsl(215, 90%, 55%);
+}
+
+.project_case-block--result {
+    border-left-color: hsl(140, 60%, 45%);
+}
+
+.project_case-label {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.25rem;
+    color: var(--title-color);
+}
+
+.project_case-text {
+    font-size: var(--small-font-size);
+    line-height: 1.55;
+    color: var(--text-color);
 }
    

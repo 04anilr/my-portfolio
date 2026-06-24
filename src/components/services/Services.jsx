@@ -1,165 +1,76 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./services.css";
+
+const SERVICES = [
+    {
+        icon: 'uil uil-cog',
+        title: 'ERPNext Customization',
+        desc: 'Tailored ERPNext modules, doctypes, and workflows mapped to your exact business processes.',
+    },
+    {
+        icon: 'uil uil-brackets-curly',
+        title: 'Frappe Development',
+        desc: 'Custom apps, server scripts, and APIs built natively on the Frappe Framework.',
+    },
+    {
+        icon: 'uil uil-money-bill',
+        title: 'Payroll Systems',
+        desc: 'Automated salary structures, tax rules, and one-click payslip generation.',
+    },
+    {
+        icon: 'uil uil-users-alt',
+        title: 'HRMS Development',
+        desc: 'Attendance, leave, and employee lifecycle management in a single platform.',
+    },
+    {
+        icon: 'uil uil-user-check',
+        title: 'Recruitment Systems',
+        desc: 'Applicant tracking, interview workflows, and automated approval pipelines.',
+    },
+    {
+        icon: 'uil uil-chart-line',
+        title: 'CRM Development',
+        desc: 'Lead scoring, deal pipelines, and automated follow-ups for sales teams.',
+    },
+    {
+        icon: 'uil uil-react',
+        title: 'React Applications',
+        desc: 'Fast, interactive, component-driven UIs with clean, maintainable code.',
+    },
+    {
+        icon: 'uil uil-server-network',
+        title: 'Next.js Applications',
+        desc: 'SEO-friendly, server-rendered web apps with great performance.',
+    },
+    {
+        icon: 'uil uil-link',
+        title: 'API Integration',
+        desc: 'Reliable REST integrations connecting ERPNext with third-party services.',
+    },
+    {
+        icon: 'uil uil-process',
+        title: 'Business Automation',
+        desc: 'Workflow automation that removes manual work and reduces errors.',
+    },
+];
+
 export const Services = () => {
-    const [toggleState, setToggleState] = useState(0);
-
-    const toggleTab = (index) => {
-        setToggleState(index);
-    }
-
-  return (
+    return (
         <section className="services section" id="services">
-        <h2 className="section_title">Services</h2>
-        <span className="section_subtitle">What I offer</span>
+            <h2 className="section_title">Services</h2>
+            <span className="section_subtitle">What I can build for your business</span>
 
-        <div className="services_container container grid">
-            <div className="services_content">
-               <div>
-               <i className="uil uil-web-grid services_icon"></i>
-                <h3 className="services_title">Product <br /> Designer</h3>
-               </div>
-               <span className="services_button" onClick={() => toggleTab(1)} >
-                View More <i className="uil uil-arrow-right 
-               services_button-icon"></i> </span>
-
-               <div className= {toggleState === 1 ? "services_modal active-modal" : "services_modal"}>
-                <div className="services_modal-content">
-                    <i onClick={() => toggleTab(0)} className="uil uil-times services_modal-close"></i>
-                    <h3 className="services_modal-title">Product Designer</h3>
-                    <p className="services_modal-description">I have entry-level experience with over a year of relative experience on academic and personal projects.</p>
-                    <ul className="services_modal-services grid">
-                        <li className="services_modal-service">
-                            <i className="uil uil-check-circle services_modal-icon"></i>
-                            <p className="services_modal-info">
-                            Custom Website Design with Interactive User.
-                            </p>
-                        </li>
-
-                        <li className="services_modal-service">
-                            <i className="uil uil-check-circle services_modal-icon"></i>
-                            <p className="services_modal-info">
-                            Content Strategy and Website Copywriting
-                            </p>
-                        </li>
-                        <li className="services_modal-service">
-                            <i className="uil uil-check-circle services_modal-icon"></i>
-                            <p className="services_modal-info">
-                            Frontend Development.
-                            </p>
-                        </li>
-                        <li className="services_modal-service">
-                            <i className="uil uil-check-circle services_modal-icon"></i>
-                            <p className="services_modal-info">
-                               I position your company brand.
-                            </p>
-                        </li>
-                        <li className="services_modal-service">
-                            <i className="uil uil-check-circle services_modal-icon"></i>
-                            <p className="services_modal-info">
-                                Design and mockups of products for companies.
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-               </div>
+            <div className="services_grid container">
+                {SERVICES.map((service) => (
+                    <article className="services_card" key={service.title}>
+                        <span className="services_card-icon">
+                            <i className={service.icon}></i>
+                        </span>
+                        <h3 className="services_card-title">{service.title}</h3>
+                        <p className="services_card-desc">{service.desc}</p>
+                    </article>
+                ))}
             </div>
-
-            <div className="services_content">
-               <div>
-               <i className="uil uil-arrow services_icon"></i>
-                <h3 className="services_title">Software <br /> Applications</h3>
-               </div>
-               <span onClick={() => toggleTab(2)} className="services_button">View More <i className="uil uil-arrow-right 
-               services_button-icon"></i> </span>
-
-               <div className= {toggleState === 2 ? "services_modal active-modal" : "services_modal"}>
-                <div className="services_modal-content">
-                    <i  onClick={() => toggleTab(0)} className="uil uil-times services_modal-close"></i>
-                    <h3 className="services_modal-title">UI/UX Designer</h3>
-                    <p className="services_modal-description">I have experience of this Software & Applications
-                    for development.</p>
-                    <ul className="services_modal-services grid">
-                        <li className="services_modal-service">
-                            <i className="uil uil-check-circle services_modal-icon"></i>
-                            <p className="services_modal-info">
-                                Git, GitHub Desktop to use for version control.
-                            </p>
-                        </li>
-
-                        <li className="services_modal-service">
-                            <i className="uil uil-check-circle services_modal-icon"></i>
-                            <p className="services_modal-info">
-                                Vercel for deployment of your project.
-                            </p>
-                        </li>
-                        <li className="services_modal-service">
-                            <i className="uil uil-check-circle services_modal-icon"></i>
-                            <p className="services_modal-info">
-                                Figma to use for create UI .
-                            </p>
-                        </li>
-                        <li className="services_modal-service">
-                            <i className="uil uil-check-circle services_modal-icon"></i>
-                            <p className="services_modal-info">
-                               npm Node.js environment.
-                            </p>
-                        </li>
-                        <li className="services_modal-service">
-                            <i className="uil uil-check-circle services_modal-icon"></i>
-                            <p className="services_modal-info">
-                                Netlify to use for deployment of project.
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-               </div>
-            </div>
-
-            <div className="services_content">
-               <div>
-               <i className="uil uil-edit services_icon"></i>
-                <h3 className="services_title">Development <br /> Tool</h3>
-               </div>
-               <span onClick={() => toggleTab(3)} className="services_button">View More <i className="uil uil-arrow-right 
-               services_button-icon"></i> </span>
-
-               <div className= {toggleState === 3 ? "services_modal active-modal" : "services_modal"}>
-                <div className="services_modal-content">
-                    <i  onClick={() => toggleTab(0)} className="uil uil-times services_modal-close"></i>
-                    <h3 className="services_modal-title">System</h3>
-                    <p className="services_modal-description">I have experience developer tools more than 
-                    2 years.</p>
-                    <ul className="services_modal-services grid">
-                        <li className="services_modal-service">
-                            <i className="uil uil-check-circle services_modal-icon"></i>
-                            <p className="services_modal-info">
-                            Visual Studio Code - Code Editing.
-                            </p>
-                        </li>
-
-                        <li className="services_modal-service">
-                            <i className="uil uil-check-circle services_modal-icon"></i>
-                            <p className="services_modal-info">
-                                Chrome.
-                            </p>
-                        </li>
-                        <li className="services_modal-service">
-                            <i className="uil uil-check-circle services_modal-icon"></i>
-                            <p className="services_modal-info">
-                                Windows 11 .
-                            </p>
-                        </li>
-                        <li className="services_modal-service">
-                            <i className="uil uil-check-circle services_modal-icon"></i>
-                            <p className="services_modal-info">
-                               Microsoft Edge.
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-               </div>
-            </div>
-        </div>
-    </section>
-  )
-}
+        </section>
+    );
+};

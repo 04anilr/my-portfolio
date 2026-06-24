@@ -6,10 +6,46 @@ import Work5 from "../../assets/insta-clone-5cuirgfg3-anil-rajputs-projects.verc
 import Work6 from "../../assets/todolist.png";
 import Work7 from "../../assets/number-counter.png";
 import Work8 from "../../assets/calculator.png";
+import CasePayroll from "../../assets/slideOne.png";
+import CaseHrms from "../../assets/slideTwo.png";
+import CaseCrm from "../../assets/slideThree.png";
 
 
 export const projectsData = [
 
+    {
+        id: 101,
+        image: CasePayroll,
+        title: 'Payroll Automation System',
+        category: 'business',
+        description: 'End-to-end payroll automation built on ERPNext for an HR operations team.',
+        problem: 'Manual payroll processing across spreadsheets caused delays, calculation errors, and compliance risk every pay cycle.',
+        solution: 'Built a payroll automation module on ERPNext with salary structures, automated tax & deduction rules, and one-click payslip generation.',
+        result: 'Cut payroll processing time by ~80% and eliminated manual calculation errors across the monthly cycle.',
+        techStack: ['Frappe', 'ERPNext', 'Python', 'MariaDB'],
+    },
+    {
+        id: 102,
+        image: CaseHrms,
+        title: 'HRMS & Recruitment Platform',
+        category: 'business',
+        description: 'A complete HRMS with attendance, leave, and an end-to-end recruitment pipeline.',
+        problem: 'HR managed employee data, leave, and hiring across disconnected tools with no single source of truth.',
+        solution: 'Developed an HRMS on Frappe covering attendance, leave workflows, and a recruitment module with applicant tracking and approval flows.',
+        result: 'Centralized HR operations into one system and reduced hiring-pipeline turnaround with automated approvals.',
+        techStack: ['Frappe', 'ERPNext', 'HRMS', 'Python'],
+    },
+    {
+        id: 103,
+        image: CaseCrm,
+        title: 'CRM & Business Automation',
+        category: 'business',
+        description: 'A custom CRM with automated lead, deal, and workflow management.',
+        problem: 'Sales teams lost leads and lacked visibility into the pipeline, with follow-ups tracked manually.',
+        solution: 'Implemented a CRM on ERPNext with lead scoring, automated assignment, and workflow-driven follow-up reminders integrated via REST APIs.',
+        result: 'Improved lead response time and gave the team real-time pipeline visibility through automated dashboards.',
+        techStack: ['ERPNext', 'CRM', 'REST API', 'Python'],
+    },
     {
         id: 1,
         image: Work1,
@@ -95,6 +131,10 @@ export const projectsData = [
 export const projectsNav = [
     {
         name: 'all',
+
+    },
+    {
+        name: 'business',
 
     },
     {

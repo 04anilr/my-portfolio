@@ -1,6 +1,7 @@
 import React from 'react';
 import "./footer.css";
 import { FaDev } from "react-icons/fa";
+import { VisitorCounter } from "./VisitorCounter";
 
 export const Footer = () => {
   return (
@@ -53,6 +54,8 @@ export const Footer = () => {
                 <i className='uil uil-github-alt'></i>
               </a>
             </div>
+            <VisitorCounter />
+
             <span className="footer_copy">
                 &#169; Anil Rajput. All rights reserved.
             </span>
