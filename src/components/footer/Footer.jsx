@@ -39,6 +39,10 @@ export const Footer = () => {
                 </li>
 
                 <li>
+                    <a href="#/blog-admin" className="footer_link">Blog Studio</a>
+                </li>
+
+                <li>
                     <a href="#contact" className="footer_link">Contact</a>
                 </li>
             </ul>

@@ -14,6 +14,7 @@ import { ScrollUp } from './components/scrollup/ScrollUp';
 import { Work } from './components/work/Work';
 import { Project } from './components/project/Project';
 import { Blog } from './components/blog/Blog';
+import { BlogAdmin } from './components/blog/BlogAdmin';
 import { JsTutorial } from './components/jstutorial/JsTutorial';
 import { JsPlaygroundCta } from './components/jstutorial/JsPlaygroundCta';
 import { AboutPage } from './components/about/AboutPage';
@@ -39,6 +40,7 @@ function App() {
         if (hash === '#/playground') return 'playground';
         if (hash === '#/about') return 'about';
         if (hash === '#/admin') return 'admin';
+        if (hash === '#/blog-admin') return 'blog-admin';
         return 'home';
     });
 
@@ -53,6 +55,9 @@ function App() {
                 window.scrollTo(0, 0);
             } else if (hash === '#/admin') {
                 setCurrentPage('admin');
+                window.scrollTo(0, 0);
+            } else if (hash === '#/blog-admin') {
+                setCurrentPage('blog-admin');
                 window.scrollTo(0, 0);
             } else {
                 setCurrentPage('home');
@@ -119,6 +124,10 @@ function App() {
             ) : currentPage === 'admin' ? (
                 <main className='main standalone-admin-page'>
                     <DocumentUpload />
+                </main>
+            ) : currentPage === 'blog-admin' ? (
+                <main className='main standalone-admin-page'>
+                    <BlogAdmin />
                 </main>
             ) : (
                 <main className='main standalone-about-page'>
